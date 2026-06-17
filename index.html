@@ -1,0 +1,215 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Save The Date</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f5f4f2;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Cormorant Garamond', serif;
+    color:#675c56;
+}
+
+.card{
+    width:420px;
+    height:760px;
+    position:relative;
+}
+
+.frame{
+    position:absolute;
+    inset:40px;
+    border-bottom:3px solid #675c56;
+    border-right:3px solid #675c56;
+    border-bottom-right-radius:70px;
+}
+
+.frame::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    border-top:3px solid #675c56;
+    border-left:3px solid #675c56;
+    border-top-left-radius:220px;
+    border-top-right-radius:220px;
+    border-bottom-left-radius:70px;
+    border-right:none;
+    border-bottom:none;
+}
+
+.left-text{
+    position:absolute;
+    left:10px;
+    top:50%;
+    transform:translateY(-50%) rotate(180deg);
+    writing-mode:vertical-rl;
+    letter-spacing:6px;
+    font-size:28px;
+}
+
+.date{
+    position:absolute;
+    right:10px;
+    top:160px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    font-size:54px;
+    font-weight:300;
+}
+
+.content{
+    position:absolute;
+    top:280px;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+}
+
+.subtitle{
+    letter-spacing:8px;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.title{
+    letter-spacing:6px;
+    font-size:26px;
+    margin-bottom:40px;
+}
+
+.name{
+    font-family:'Great Vibes', cursive;
+    font-size:72px;
+    line-height:1.1;
+}
+
+.and{
+    font-family:'Great Vibes', cursive;
+    font-size:42px;
+    margin:15px 0;
+}
+
+.footer{
+    margin-top:60px;
+    letter-spacing:6px;
+    font-size:16px;
+}
+
+.open-btn{
+    position:fixed;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    border:none;
+    background:#675c56;
+    color:white;
+    padding:12px 28px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.music{
+    display:none;
+}
+
+@media(max-width:480px){
+
+    .card{
+        width:100%;
+        max-width:420px;
+        height:100vh;
+    }
+
+    .name{
+        font-size:58px;
+    }
+
+    .date{
+        font-size:46px;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <div class="frame"></div>
+
+    <div class="left-text">
+        save the date
+    </div>
+
+    <div class="date">
+        <span>14</span>
+        <span>01</span>
+        <span>24</span>
+    </div>
+
+    <div class="content">
+
+        <div class="subtitle">
+            FOR THE
+        </div>
+
+        <div class="title">
+            WEDDING OF
+        </div>
+
+        <div class="name">Harumi</div>
+
+        <div class="and">and</div>
+
+        <div class="name">Jamie</div>
+
+        <div class="footer">
+            INVITATION TO FOLLOW
+        </div>
+
+    </div>
+
+</div>
+
+<button class="open-btn" onclick="openInvitation()">
+    Open Invitation
+</button>
+
+<script>
+
+function openInvitation(){
+
+    alert(
+        "Nanti tombol ini bisa diarahkan ke halaman undangan lengkap, memutar musik, atau membuka animasi."
+    );
+
+}
+
+</script>
+
+</body>
+</html>
+```
